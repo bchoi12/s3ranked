@@ -1,4 +1,6 @@
 <?php
+	echo "hi";
+	die();
 
 	$summoner = $_POST["summoner"];
 	$summoner = str_replace(" ", "", $summoner);
