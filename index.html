@@ -71,7 +71,7 @@
 		}
 
 		xmlhttp.open("POST", "ranked.php", true);
-		xmlhttp.setRequestHeader("Content-type", "application/octet-stream");
+		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xmlhttp.send("summoner=" + document.getElementById("summoner").value + "&region=" + document.getElementById("region").value);
 	}
 
