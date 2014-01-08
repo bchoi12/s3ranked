@@ -56,10 +56,10 @@
 		}
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == 1){
-				$("#overlay").fadeIn(1500);
-				setTimeout(function(){ document.getElementById("overlay").innerHTML = "<div id='center_height'></div><h1 id='overlay_search'>Loading...</h1>"; $("#overlay_search").hide(); $("#overlay_search").delay(2100).fadeIn(1000);}, 1800);
+				$("#title").html("Searching...");
+//				$("#overlay").fadeIn(10);
+//				setTimeout(function(){ }, 1800);
 			} else if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-				document.getElementById("overlay_search").innerHTML = "Done!";
 				document.getElementById("form_container").innerHTML = "<h3>hi :)</h3>";
 				$("#form_container").css('margin-top', '100%');
 				$("#form_container").css('background', '#000000');
@@ -76,13 +76,14 @@
 	}
 
 	function initAnimations(){
-		if (document.getElementById("error") !== null){ // error finding summoner
-			$("#overlay").fadeOut(1);
-			return;
-		}
-
 		var w = $(window).width();
 		var h = $(window).height();
+
+		if (document.getElementById("error") !== null){ // error finding summoner
+			$("#container").css('background', '#000000 url("title_back.jpg") no-repeat center').css('background-size', 'cover');
+			$("#error").css('margin-top', (0.15*h)+'px');
+			return;
+		}
 
 		// SET BACKGROUNDS
 		$("#container").css('background', '#000000 url("title_back.jpg") no-repeat center').css('background-size', 'cover');

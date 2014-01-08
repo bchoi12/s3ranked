@@ -35,6 +35,24 @@ div #center_height {
 	text-align: center;
 }
 
+div #error {
+	width: 60%;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 48px;
+	color: white;
+	text-shadow: 
+		0 0 4px black,
+		0 0 4px black,
+		0 0 4px black,
+		0 0 4px black,
+		0 0 4px black,
+		0 0 4px black,
+		0 0 4px black,
+		0 0 4px black;
+	text-align: center;
+	margin: 0 auto;
+}
+
 #info {
 	position: absolute;
 	visibility: hidden;
